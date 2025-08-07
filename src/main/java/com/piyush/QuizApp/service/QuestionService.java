@@ -23,7 +23,7 @@ public class QuestionService {
             for(Questions q1 : questions){
                 questionRepo.save(q1);
             }
-            return new ResponseEntity<>("Created",HttpStatus.CREATED);
+            return new ResponseEntity<>("Question Added",HttpStatus.CREATED);
         }catch (Exception e){
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
