@@ -66,8 +66,8 @@ public class QuizService {
 
     public ResponseEntity<Integer> calculateScore(int id, List<Response> responses) {
 
-        Optional<Quiz> quiz = quizRepository.findById(id);
-        List<Questions> questions = quiz.get().getQuestions();
+        Quiz quiz = quizRepository.findById(id).get();
+        List<Questions> questions = quiz.getQuestions();
 
         int right = 0;
         int i=0;
